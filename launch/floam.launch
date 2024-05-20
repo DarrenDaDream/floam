@@ -2,7 +2,8 @@
 <launch>
 
     
-    <node pkg="rosbag" type="play" name="rosbag_play" args="--clock $(env HOME)/Downloads/2011_09_30_0018.bag"/> 
+    <node pkg="rosbag" type="play" name="rosbag_play" args="--clock /home/darren/2011_09_30_0027.bag"/> 
+    
 
     <!-- For Velodyne VLP-16 
     <param name="scan_line" value="16" />
@@ -23,7 +24,7 @@
     <param name="max_dis" type="double" value="90.0" />
     <param name="min_dis" type="double" value="3.0" />
 
-    <!--- -->
+    <!---static transform -->
     <node pkg="floam" type="floam_odom_estimation_node" name="floam_odom_estimation_node" output="screen"/>
     <node pkg="floam" type="floam_laser_processing_node" name="floam_laser_processing_node" output="screen"/>
     
